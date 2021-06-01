@@ -2,29 +2,22 @@
     box-sizing: border-box;
 }
 .calculadora{
-    height: 350px;
     width: 350px;
     background-color: black;
     padding: 5px;
-    
 }
 #painel{
-    margin: 5px;
-    width: 93%;
+    width: 100%;
     height: 30px;
-}
-#cima{
-    
+    margin-bottom: 5px;
 }
 #numeros button{
     height: 40px;
-    width: 23%;
-    margin-bottom: 5px;
-    margin-right: 5px;
+    width: 25%;
+    
 }
 #numeros{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     
 }
