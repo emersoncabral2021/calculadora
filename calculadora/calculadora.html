@@ -9,31 +9,32 @@
 </head>
 <body>
     <div class="calculadora">
-        <input type="text" id="painel">
+       <div id="painel"></div>
 
-        <div id="numeros">
-            <button>C</button>
-            <button>apagar</button>
+        <div id="botoes">
+            <button onclick="digitenum( )">C</button>
+            <button onclick="digitenum(10)">apagar</button>
             <button>%</button>
             <button><i class="fas fa-divide"></i></button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>x</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
+            <button onclick="digitenum(1)">1</button>
+            <button onclick="digitenum(2)">2</button>
+            <button onclick="digitenum(3)">3</button>
+            <button >x</button>
+            <button onclick="digitenum(4)">4</button>
+            <button onclick="digitenum(5)">5</button>
+            <button onclick="digitenum(6)">6</button>
+            <button >-</button>
+            <button onclick="digitenum(7)">7</button>
+            <button onclick="digitenum(8)">8</button>
+            <button onclick="digitenum(9)">9</button>
             <button>+</button>
             <button> </button>
-            <button>0</button>
-            <button>.</button>
+            <button onclick="digitenum(0)">0</button>
+            <button >.</button>
             <button>=</button>
         </div>
     </div>
+    <script src="calculadora.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 
 </body>
