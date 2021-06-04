@@ -1,2 +1,2 @@
 # calculadora
- calculadora sliplis
+ calculadora simples
