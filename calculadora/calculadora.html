@@ -9,29 +9,33 @@
 </head>
 <body>
     <div class="calculadora">
-       <div id="painel"></div>
+       <div id="painel">
+          <input type="text" disabled name="" id="num_primeiro">
+          <div id="operação"> </div>
+          <input type="text" disabled name="" id="num_segundo">
+       </div>
 
         <div id="botoes">
-            <button onclick="digitenum( )">C</button>
-            <button onclick="digitenum(10)">apagar</button>
-            <button>%</button>
-            <button><i class="fas fa-divide"></i></button>
+            <button onclick="operacao('limpar')">C</button>
+            <button onclick="operacao('apagar')">apagar</button>
+            <button onclick="operacao('pon')">%</button>
+            <button onclick="operacao(' / ')"><i class="fas fa-divide"></i></button>
             <button onclick="digitenum(1)">1</button>
             <button onclick="digitenum(2)">2</button>
             <button onclick="digitenum(3)">3</button>
-            <button >x</button>
+            <button onclick="operacao(' x ')">x</button>
             <button onclick="digitenum(4)">4</button>
             <button onclick="digitenum(5)">5</button>
             <button onclick="digitenum(6)">6</button>
-            <button >-</button>
+            <button onclick="operacao(' - ')">-</button>
             <button onclick="digitenum(7)">7</button>
             <button onclick="digitenum(8)">8</button>
             <button onclick="digitenum(9)">9</button>
-            <button>+</button>
+            <button onclick="operacao(' + ')">+</button>
             <button> </button>
             <button onclick="digitenum(0)">0</button>
-            <button >.</button>
-            <button>=</button>
+            <button onclick="digitenum('.')">.</button>
+            <button onclick="operacao(' = ')">=</button>
         </div>
     </div>
     <script src="calculadora.js"></script>

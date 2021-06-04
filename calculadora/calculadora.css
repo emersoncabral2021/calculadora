@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .calculadora{
-    width: 350px;
+    width: 370px;
     background-color: black;
     padding: 5px;
     border-radius: 10px;
@@ -36,4 +36,10 @@
 #botoes button:hover{
    background-color: orange;
    color: rgb(255, 255, 255);
+}
+input{
+    border: none;
+    height: 35px;
+    font-size: 25px;
+    width: 100px;
 }
