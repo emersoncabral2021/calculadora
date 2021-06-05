@@ -1,20 +1,22 @@
 var pri = document.getElementById("num_primeiro")
-var prinumero,segnumero,resultado,valor1,valor
+var prinumero,segnumero,resultado,valor
 var repetiope = 0
 function digitenum(num){
     if((num == ' + ') || (num == ' - ') || (num == ' x ') || (num == ' / ') || (num == ' % ') ){
-        valor1 = pri.value
-        valor = valor1.substr(0,valor1.length)
-        prinumero = Number(valor1.substr(0,(valor1.length)))
-        console.log(valor)
+        valor = pri.value.substr(0,pri.value.length)
+        prinumero = Number(pri.value.substr(0,(pri.value.length)))
         repetiope++
         if(pri.value == "NaN" + num){
-            pri.value = Number(valor1.substr(0,(valor1.length)))
+            pri.value = Number(pri.value.substr(0,(pri.value.length)))
         }else if(repetiope == 1){
-        pri.value = valor1.substr(0,(valor1.length)) + num
+        pri.value = pri.value.substr(0,(pri.value.length)) + num
         }
       }else if(num == ' = '){
+        segnumero = Number(pri.value.substr((valor.length + 3),pri.value.length)) 
         
+        resultado = prinumero + segnumero
+        console.log(resultado)
+
     }else if(num == 'limpar'){
         pri.value = ""
 
