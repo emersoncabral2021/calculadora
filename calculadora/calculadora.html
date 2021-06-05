@@ -10,32 +10,30 @@
 <body>
     <div class="calculadora">
        <div id="painel">
-          <input type="text" disabled name="" id="num_primeiro">
-          <div id="operação"> </div>
-          <input type="text" disabled name="" id="num_segundo">
+          <input type="text" disabled id="num_primeiro">
        </div>
 
         <div id="botoes">
-            <button onclick="operacao('limpar')">C</button>
-            <button onclick="operacao('apagar')">apagar</button>
-            <button onclick="operacao('pon')">%</button>
-            <button onclick="operacao(' / ')"><i class="fas fa-divide"></i></button>
+            <button onclick="digitenum('limpar')">C</button>
+            <button onclick="digitenum('apagar')">apagar</button>
+            <button onclick="digitenum(' % ')">%</button>
+            <button onclick="digitenum(' / ')"><i class="fas fa-divide"></i></button>
             <button onclick="digitenum(1)">1</button>
             <button onclick="digitenum(2)">2</button>
             <button onclick="digitenum(3)">3</button>
-            <button onclick="operacao(' x ')">x</button>
+            <button onclick="digitenum(' x ')">x</button>
             <button onclick="digitenum(4)">4</button>
             <button onclick="digitenum(5)">5</button>
             <button onclick="digitenum(6)">6</button>
-            <button onclick="operacao(' - ')">-</button>
+            <button onclick="digitenum(' - ')">-</button>
             <button onclick="digitenum(7)">7</button>
             <button onclick="digitenum(8)">8</button>
             <button onclick="digitenum(9)">9</button>
-            <button onclick="operacao(' + ')">+</button>
+            <button onclick="digitenum(' + ')">+</button>
             <button> </button>
             <button onclick="digitenum(0)">0</button>
             <button onclick="digitenum('.')">.</button>
-            <button onclick="operacao(' = ')">=</button>
+            <button onclick="digitenum(' = ')">=</button>
         </div>
     </div>
     <script src="calculadora.js"></script>

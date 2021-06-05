@@ -1,27 +1,32 @@
-var operação = document.getElementById("operação")
 var pri = document.getElementById("num_primeiro")
-var seg = document.getElementById("num_segundo")
-var prinumero,segnumero,resultado
-
+var prinumero,segnumero,resultado,valor1,valor
+var repetiope = 0
 function digitenum(num){
+    if((num == ' + ') || (num == ' - ') || (num == ' x ') || (num == ' / ') || (num == ' % ') ){
+        valor1 = pri.value
+        valor = valor1.substr(0,valor1.length)
+        prinumero = Number(valor1.substr(0,(valor1.length)))
+        console.log(valor)
+        repetiope++
+        if(pri.value == "NaN" + num){
+            pri.value = Number(valor1.substr(0,(valor1.length)))
+        }else if(repetiope == 1){
+        pri.value = valor1.substr(0,(valor1.length)) + num
+        }
+      }else if(num == ' = '){
+        
+    }else if(num == 'limpar'){
+        pri.value = ""
+
+    }else{
+    pri.value += num
+
+    }
 
 
     
 }
 
-function operacao(op){
-    if(op == ' + '){
-        operação.innerHTML = op
-    }else if(op == ' - '){
-        operação.innerHTML = op
-    }else if(op == ' x '){
-        operação.innerHTML = op
-    }else if(op == ' / '){
-        operação.innerHTML = op
-    }else if(op == ' = '){
-        
-    }
-}
 
 
 
