@@ -3,10 +3,14 @@ var prinumero,segnumero,resultado,valor
 var repetioperacao = 0        
 var selecionaroperacao = 0
 
+
+
+
+
+
 function digitenum(num){
     if(num == ' + '){
         selecionaroperacao = 1
-        
     }else if(num == ' - '){
         selecionaroperacao = 2
     }else if(num == ' x '){
@@ -16,7 +20,7 @@ function digitenum(num){
     }else if(num == ' % '){
         selecionaroperacao = 5        
     }
-
+    
     if((num == ' + ') || (num == ' - ') || (num == ' x ') || (num == ' / ') || (num == ' % ') ){
         valor = pri.value.substr(0,pri.value.length)
         prinumero = Number(pri.value.substr(0,(pri.value.length)))
@@ -26,9 +30,7 @@ function digitenum(num){
         }else if(repetioperacao == 1){
         pri.value = pri.value.substr(0,(pri.value.length)) + num
         }
-      }else if(num == ' = '){
-
-    
+      } else if(num == ' = '){
         segnumero = Number(pri.value.substr((valor.length + 3),pri.value.length)) 
     if(selecionaroperacao == 1){
             resultado = prinumero + segnumero
@@ -52,7 +54,7 @@ function digitenum(num){
             repetioperacao = 0
         }
 
-    }else if(num == 'limpar'){
+    }/*else if(num == 'limpar'){
         pri.value = ""
         prinumero = ""
         segnumero = ""
@@ -72,12 +74,32 @@ function digitenum(num){
 
         }
         
-    }else{
+    }*/else{
     pri.value += num
 
     }
-
-
-    
 }
+
+function apagar(){
+    let painel = new String(pri.value)
+    let string_primeironumero = new String(prinumero)
+    if(painel.length == (string_primeironumero.length + 2)){
+        repetioperacao = 0
+        selecionaroperacao = 0
+        pri.value = painel.slice(0,(painel.length - 1))
+    }else{
+        pri.value = painel.slice(0,(painel.length - 1))
+
+    }
+}
+
+function limpar(){
+    pri.value = ""
+    prinumero = ""
+    segnumero = ""
+    resultado = ""
+    repetioperacao = 0
+    selecionaroperacao = 0
+}
+
 
