@@ -28,8 +28,6 @@ function digitenum(num){
         }
       }else if(num == ' = '){
         igual(selecionaroperacao)
-      }else if (segnumero != 0){
-          limpar()
       }
        /*else if(num == ' = '){
         segnumero = Number(pri.value.substr((valor.length + 3),pri.value.length)) 
